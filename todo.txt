@@ -1,0 +1,5 @@
+TODO LIST:
+- Write documentation
+- Fix spelling mistakes
+- Add more test cases
+- Update README
