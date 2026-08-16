@@ -1,0 +1,14 @@
+INTEL - FortiGate SSL VPN Vulnerability
+
+I've been reverse engineering the latest FortiOS patch.
+
+There's a memory corruption bug in the SSL VPN handler:
+- Heap overflow in parsing HTTP headers
+- Triggered by sending > 4096 bytes to /remote/login
+
+This can lead to Remote Code Execution without authentication.
+
+Proof of concept:
+-> python3 trigger.py target.com
+
+I'll release the full exploit after the vendor confirms the fix.
